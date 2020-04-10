@@ -48,7 +48,7 @@ properties:
     description: >
       Country or region
     type: string
-    
+
   county:
     description: >
       County
@@ -69,20 +69,27 @@ properties:
       FIPS
     type: integer
 
-  iso2: 
+  zipcodes:
+    description: >
+      Comments from PATRIC's genome metadata.
+    type: array
+    items:
+      type: string
+
+  iso2:
     description: >
       iso2
     type: string
 
-  iso3: 
+  iso3:
     description: >
       iso3
     type: string
-  
+
   code3:
     description: >
       code3
-    type: integer 
+    type: integer
 
   projects:
     $ref: "_definitions.yaml#/to_one_project"

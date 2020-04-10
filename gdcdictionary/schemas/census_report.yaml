@@ -1,0 +1,72 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "census_report"
+title: Census Report
+type: object
+namespace: http://hop.ohsu.edu
+category: administrative
+program: '*'
+project: '*'
+description: >
+  A specific measurement of the census of a zip code
+additionalProperties: false
+submittable: false
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+
+required:
+  - submitter_id
+  - type
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+links:
+  - name: summary_location
+    backref: census
+    label: census_of
+    target_type: summary_location
+    multiplicity: many_to_one
+    required: true
+
+# Case properties
+properties:
+  type:
+    type: string
+  id:
+    systemAlias: node_id
+
+  submitter_id:
+    type:
+      - string
+      - "null"
+
+  date:
+    type: string
+
+  summary_location:
+    type: string
+
+  zipcode:
+    description: "Specific Mailing Zipcode"
+    type: string
+
+  population:
+    type: integer
+
+  minimum_age:
+    type:
+      - integer
+      - null
+
+  maximum_age:
+    type:
+      - integer
+      - null
+
+  gender:
+    type: string
