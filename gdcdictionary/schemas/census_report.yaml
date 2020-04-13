@@ -20,6 +20,7 @@ systemProperties:
 required:
   - submitter_id
   - type
+  - summary_location
 
 uniqueKeys:
   - [id]
