@@ -62,12 +62,14 @@ properties:
   minimum_age:
     type:
       - integer
-      - null
+      - "null"
 
   maximum_age:
     type:
       - integer
-      - null
+      - "null"
 
   gender:
-    type: string
+    type:
+      - string
+      - "null"

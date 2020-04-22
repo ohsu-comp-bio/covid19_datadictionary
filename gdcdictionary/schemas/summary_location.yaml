@@ -69,13 +69,6 @@ properties:
       FIPS
     type: integer
 
-  zipcodes:
-    description: >
-      Comments from PATRIC's genome metadata.
-    type: array
-    items:
-      type: string
-
   iso2:
     description: >
       iso2
@@ -95,6 +88,12 @@ properties:
     description: >
       The zip code number for the location.
     type: string
+
+  zipcodes:
+    description: >
+      The zip codes covered by this area.
+    type: array
+    items: string
 
   reporting_org:
     description: >
