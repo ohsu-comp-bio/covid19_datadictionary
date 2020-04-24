@@ -1,0 +1,65 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "geographic_area"
+title: Geographic Area
+type: object
+namespace: http://gdc.nci.nih.gov
+category: administrative
+program: '*'
+project: '*'
+description: "Description of an area's geograph."
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - summary_location
+
+links:
+  - name: projects
+    backref: summary_location
+    label: geograph_area
+    target_type: project
+    multiplicity: one_to_one
+    required: true
+
+required:
+  - submitter_id
+  - type
+  - projects
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  county:
+    description: >
+      County
+    type: string
+  FIPS:
+    description: >
+      FIPS
+    type: integer
+
+  geometry:
+    type: array
+    items:
+      type: object
+      properties:
+        latitude:
+          type: number
+          minimum: -90
+          maximum: 90
+        longitude:
+          type: number
+          minimum: -180
+          maximum: 180
+
+  projects:
+    $ref: "_definitions.yaml#/to_one_project"

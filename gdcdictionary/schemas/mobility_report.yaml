@@ -1,0 +1,105 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "mobility_report"
+title: Mobility Report
+type: object
+namespace: https://chicagoland.pandemicresponsecommons.org
+category: administrative
+program: '*'
+project: '*'
+description: >
+  Relative measurements of population, as measured by Google, for a location at a particular datetime.
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - created_datetime
+  - updated_datetime
+  - state
+
+links:
+  - name: summary_locations
+    backref: summary_reports
+    label: performed_at
+    target_type: summary_location
+    multiplicity: many_to_one
+    required: true
+
+required:
+  - submitter_id
+  - type
+  - summary_locations
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  confirmed:
+    description: >
+      Confirmed cases
+    type: integer
+
+  deaths:
+    description: >
+      Total number of deaths
+    type: integer
+
+  recovered:
+    description: >
+      Total number of recovered cases
+    type: integer
+
+  testing:
+    description: >
+      Number of tests conducted
+    type: integer
+
+  negative:
+    description: >
+      Number of negative tests
+    type: integer
+
+  date:
+    description: >
+      Date
+    type: string
+
+  summary_locations:
+    $ref: "_definitions.yaml#/to_many"
+
+  grocery_and_pharmacy_percent_change_from_baseline:
+    type:
+      - "null"
+      - integer
+
+
+  parks_percent_change_from_baseline:
+    type:
+      - "null"
+      - integer
+
+  residential_percent_change_from_baseline:
+    type:
+      - "null"
+      - integer
+
+  retail_and_recreation_percent_change_from_baseline:
+    type:
+      - "null"
+      - integer
+
+  transit_stations_percent_change_from_baseline:
+    type:
+      - "null"
+      - integer
+
+  workplaces_percent_change_from_baseline:
+    type:
+      - "null"
+      - integer
