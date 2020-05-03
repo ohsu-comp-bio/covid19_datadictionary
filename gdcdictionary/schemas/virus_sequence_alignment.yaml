@@ -75,12 +75,16 @@ properties:
       $ref: "_terms.yaml#/data_format"
     enum:
       - fasta
+      - aln
+      - maf
   alignment_tool:
     description : >
         The alignment tool that was used to create the alignment file.
     enum:
       - MAFFT
       - ClustalW
+      - muscle
+      - Clustal Omega
 
   virus_sequences:
     $ref: "_definitions.yaml#/to_many"
