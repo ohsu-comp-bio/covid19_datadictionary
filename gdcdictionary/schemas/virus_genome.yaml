@@ -75,17 +75,27 @@ properties:
       $ref: "_terms.yaml#/data_type"
     enum:
       - Complete Genomic Sequence
+      - Complete Genome
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum:
       - gb
   data_source:
-    term: >
+    description: >
       The source of the virus genome.
     enum:
       - GenBank
       - NCBI
+  accession:
+    description: >
+      The accession id of the virus genome.
+    type: string
+      
+  accession_date:
+    description: >
+      The accession date for the record.
+    type: string    
 
   samples:
     $ref: "_definitions.yaml#/to_one"
