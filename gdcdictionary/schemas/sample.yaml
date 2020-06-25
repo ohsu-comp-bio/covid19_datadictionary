@@ -30,33 +30,18 @@ uniqueKeys:
   - [project_id, submitter_id]
 
 links:
-  - exclusive: false
+  - name: subjects
+    backref: samples
+    label: derived_from
+    target_type: subject
+    multiplicity: many_to_one
     required: true
-    subgroup:
-    - name: subjects
-      backref: samples
-      label: derived_from
-      target_type: subject
-      multiplicity: many_to_one
-      required: false
-    - name: diagnoses
-      backref: samples
-      label: related_to
-      target_type: diagnosis
-      multiplicity: many_to_one
-      required: false
-    - name: studies
-      backref: samples
-      label: related_to
-      target_type: study
-      multiplicity: many_to_one
-      required: false
-    - name: projects
-      backref: samples
-      label: related_to
-      target_type: project
-      multiplicity: many_to_one
-      required: false   
+  - name: diagnoses
+    backref: samples
+    label: related_to
+    target_type: diagnosis
+    multiplicity: many_to_one
+    required: false
 
 # Sample properties: keep TCGA-specific fields
 properties:
@@ -674,32 +659,13 @@ properties:
     description: >
       Record identifier assigned by NCBI for entry in the BioSample database.
     type: string
-    
-  host:
-    description: >
-      The species of the host.
-    type: string
-    
-  location:
-    description: >
-      The geographic location of the host.
-    type: string
-
-  organism:
-    description: >
-      The scientific taxonomy of the organism.
-    type: string 
-    
- 
 
   subjects:
     $ref: "_definitions.yaml#/to_one"
-  studies:
+  follow_ups:
     $ref: "_definitions.yaml#/to_one"
   diagnoses:
     $ref: "_definitions.yaml#/to_one"
-  projects:
-    $ref: "_definitions.yaml#/to_one_project"  
   project_id:
     type: string
   created_datetime:

@@ -22,7 +22,7 @@ systemProperties:
 
 links:
   - name: summary_locations
-    backref: mobility_reports
+    backref: summary_reports
     label: performed_at
     target_type: summary_location
     multiplicity: many_to_one
@@ -77,6 +77,7 @@ properties:
     type:
       - "null"
       - integer
+
 
   parks_percent_change_from_baseline:
     type:

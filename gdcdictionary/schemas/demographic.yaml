@@ -51,6 +51,11 @@ uniqueKeys:
 properties:
   $ref: "_definitions.yaml#/ubiquitous_properties"
 
+  adults_per_household:
+      description: >
+        number of adults per household
+      type: integer
+
   bmi:
     description: >
       The body mass divided by the square of the body height expressed in units of kg/m^2.
@@ -60,7 +65,20 @@ properties:
         source: NCI Thesaurus
         term_id: C138901
         term_version: 18.11d (Release date:2018-11-26)
-  
+
+  carefacility_nursinghome:
+    description: >
+      participant living in a care facility or nursing home
+    type: string
+    enum:
+      - Yes
+      - No
+
+  children_per_household:
+    description: >
+        Number of children per household
+    type: integer
+
   country_of_birth:
     description: >
       Country of birth
@@ -81,6 +99,9 @@ properties:
     enum:
       - female
       - male
+      - non-binary
+      - prefer to self-describe
+      - x
       - unknown
       - unspecified
       - not reported
@@ -182,8 +203,6 @@ properties:
     enum:
       - Hispanic/Latino
       - Non-Hispanic/Latino
-      - Not specified
-      - Other
     termDef:
       - term: Ethnicity
         source: NCI Thesaurus
@@ -198,14 +217,7 @@ properties:
         source: NCI Thesaurus
         term_id: C41222
         term_version: 18.09d (Release date:2018-09-24)
-      - enumeration: Not specified
-        source: NCI Thesaurus
-        term_id:  C38046
-        term_version: 20.02d (Release date:2020-02-24)
-      - enumeration: Other
-        source: NCI Thesaurus
-        term_id: C17649
-        term_version: 18.09d (Release date:2018-09-24)
+
 
   sexual_orientation:
     description: >
@@ -326,7 +338,7 @@ properties:
     termDef:
       - term: nationality
         source: NCI Thesaurus
-        term_id: C28407 
+        term_id: C28407
         term_version: 18.11d (Release date:2020-03-31)
 
   subjects:

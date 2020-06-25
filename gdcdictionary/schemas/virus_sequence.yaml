@@ -81,14 +81,13 @@ properties:
       $ref: "_terms.yaml#/data_type"
     enum:
       - Sequence
-      - Multi-Fasta
   data_format:
     term:
       $ref: "_terms.yaml#/data_format"
     enum:
       - fasta
   data_source:
-    description: >
+    term: >
       The source of the virus sequence.
     enum:
       - GenBank
