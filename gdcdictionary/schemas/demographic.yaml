@@ -203,6 +203,8 @@ properties:
     enum:
       - Hispanic/Latino
       - Non-Hispanic/Latino
+      - Not specified
+      - Other
     termDef:
       - term: Ethnicity
         source: NCI Thesaurus
@@ -216,6 +218,14 @@ properties:
       - enumeration: Not Hispanic or Latino
         source: NCI Thesaurus
         term_id: C41222
+        term_version: 18.09d (Release date:2018-09-24)
+      - enumeration: Not specified
+        source: NCI Thesaurus
+        term_id:  C38046
+        term_version: 20.02d (Release date:2020-02-24)
+      - enumeration: Other
+        source: NCI Thesaurus
+        term_id: C17649
         term_version: 18.09d (Release date:2018-09-24)
 
   sexual_orientation:
