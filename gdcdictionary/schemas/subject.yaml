@@ -399,6 +399,17 @@ properties:
       Hospital visit date
     type: string
 
+  exposure_summary:
+    description: >
+      Exposure response from daily survey, QID14
+    type:
+      - string
+    enum:
+      - "contacted_someone_diagnosed_covid"
+      - "live_visit_place_where_covid_spreading"
+      - "both"
+      - "neither"
+
   exposure_start:
     description: >
       Exposure start
@@ -555,10 +566,23 @@ properties:
     items:
       type: string
 
+  sick:
+    description: >
+      How sick participant feels on that given day. Daily survey QID1
+    type: string
+
   studies:
     $ref: "_definitions.yaml#/to_many"
   projects:
     $ref: "_definitions.yaml#/to_one_project"
+
+  want_test_kit:
+    description: >
+      If participant reports certain symptoms they will be prompted with Q if they want a test kit sent to them. Daily survey QID15
+    type: string
+    enum:
+      - "Yes"
+      - "No"
 
   zipcode:
       description: >
