@@ -588,3 +588,256 @@ properties:
       description: >
         participant reported zipcode from consent survey
       type: integer
+
+
+  temperature:
+    description: >
+      If you are able to measure it, what is your temperature (F)?. daily survey QID7
+
+  symptom_fever:
+    description: >
+      Fever (higher than or equal to 100.4 F). daily survey QID4_1
+    enum:
+     - 'Do not have'
+     - 'Very mild'
+     - 'Mild'
+     - 'Moderate'
+     - 'Severe'
+
+  symptom_feverish:
+    description: >
+      Feeling feverish (chills, sweating)'}. daily survey QID4_5
+    enum:
+     - 'Do not have'
+     - 'Very mild'
+     - 'Mild'
+     - 'Moderate'
+     - 'Severe'
+
+  symptom_shortnessbreath:
+    description: >
+      Shortness of breath. daily survey QID4_6
+    enum:
+     - 'Do not have'
+     - 'Very mild'
+     - 'Mild'
+     - 'Moderate'
+     - 'Severe'
+
+  symptom_cough:
+    description: >
+      Cough (unexplained or new cough, lasting two weeks or less). daily survey QID4_7
+    enum:
+     - 'Do not have'
+     - 'Very mild'
+     - 'Mild'
+     - 'Moderate'
+     - 'Severe'
+
+  symptom_sorethroat:
+    description: >
+      Sore throat. daily survey QID4_8
+    enum:
+     - 'Do not have'
+     - 'Very mild'
+     - 'Mild'
+     - 'Moderate'
+     - 'Severe'
+
+  symptom_muscleache:
+    description: >
+      Muscle ache. daily survey QID4_9
+    enum:
+     - 'Do not have'
+     - 'Very mild'
+     - 'Mild'
+     - 'Moderate'
+     - 'Severe'
+
+  symptom_bodayache:
+    description: >
+      Body ache. daily survey QID4_21
+    enum:
+     - 'Do not have'
+     - 'Very mild'
+     - 'Mild'
+     - 'Moderate'
+     - 'Severe'
+
+  symptom_loss_smell_taste:
+    description: >
+      New loss in sense of smell/taste. daily survey QID4_27
+    enum:
+     - 'Do not have'
+     - 'Very mild'
+     - 'Mild'
+     - 'Moderate'
+     - 'Severe'
+
+  symptom_vomit:
+    description: >
+      Vomiting. daily survey QID4_29
+    enum:
+     - 'Do not have'
+     - 'Very mild'
+     - 'Mild'
+     - 'Moderate'
+     - 'Severe'
+
+  symptom_diarrhea:
+    description: >
+      Diarrhea. daily survey QID4_30
+    enum:
+     - 'Do not have'
+     - 'Very mild'
+     - 'Mild'
+     - 'Moderate'
+     - 'Severe'
+
+  symptom_tired:
+    description: >
+      Feeling tired. daily survey QID8_2
+    enum:
+     - 'Do not have'
+     - 'Very mild'
+     - 'Mild'
+     - 'Moderate'
+     - 'Severe'
+
+  symptom_headache:
+    description: >
+      Headache. daily survey QID8_4
+    enum:
+     - 'Do not have'
+     - 'Very mild'
+     - 'Mild'
+     - 'Moderate'
+     - 'Severe'
+
+  symptom_repeat_shaking_chills:
+    description: >
+      Repeated shaking with chills. daily survey QID8_10
+    enum:
+     - 'Do not have'
+     - 'Very mild'
+     - 'Mild'
+     - 'Moderate'
+     - 'Severe'
+
+  symptom_nausea:
+    description: >
+      Nausea. daily survey QID8_14
+    enum:
+     - 'Do not have'
+     - 'Very mild'
+     - 'Mild'
+     - 'Moderate'
+     - 'Severe'
+
+  symptom_head_congestion:
+    description: >
+      Head congestion. daily survey QID8_15
+    enum:
+     - 'Do not have'
+     - 'Very mild'
+     - 'Mild'
+     - 'Moderate'
+     - 'Severe'
+
+  symptom_chest_congestion:
+    description: >
+      Chest congestion. daily survey QID8_17
+    enum:
+     - 'Do not have'
+     - 'Very mild'
+     - 'Mild'
+     - 'Moderate'
+     - 'Severe'
+
+  symptom_abdominal_pain:
+    description: >
+      Abdominal pain. daily survey QID8_18
+    enum:
+     - 'Do not have'
+     - 'Very mild'
+     - 'Mild'
+     - 'Moderate'
+     - 'Severe'
+
+  symptom_toe_discoloration:
+    description: >
+      New discoloration of toes (reddish-purple). daily survey QID8_27
+    enum:
+     - 'Do not have'
+     - 'Very mild'
+     - 'Mild'
+     - 'Moderate'
+     - 'Severe'
+
+  symptom_scratchy_throat:
+    description: >
+      Scratchy throat. daily survey QID8_28
+    enum:
+     - 'Do not have'
+     - 'Very mild'
+     - 'Mild'
+     - 'Moderate'
+     - 'Severe'
+
+  symptom_runny_nose:
+    description: >
+      Runny nose. daily survey QID8_29
+    enum:
+     - 'Do not have'
+     - 'Very mild'
+     - 'Mild'
+     - 'Moderate'
+     - 'Severe'
+
+  symptom_plugged_nose:
+    description: >
+      Plugged nose. daily survey QID8_30
+    enum:
+     - 'Do not have'
+     - 'Very mild'
+     - 'Mild'
+     - 'Moderate'
+     - 'Severe'
+
+  symptom_sneezing:
+    description: >
+      Sneezing. daily survey QID8_31
+    enum:
+     - 'Do not have'
+     - 'Very mild'
+     - 'Mild'
+     - 'Moderate'
+     - 'Severe'
+
+  symptom_hoarseness:
+    description: >
+      Hoarseness. daily survey QID8_32
+    enum:
+     - 'Do not have'
+     - 'Very mild'
+     - 'Mild'
+     - 'Moderate'
+     - 'Severe'
+
+  symptom_rash:
+    description: >
+      Rash. daily survey QID8_33
+    enum:
+     - 'Do not have'
+     - 'Very mild'
+     - 'Mild'
+     - 'Moderate'
+     - 'Severe'
+
+  symptom_other:
+    description: >
+      Self entered text from prompt If you have another symptom we have not asked about, please list them here. daily survey QID8_34
+
+  survey_date:
+    description: date time stamp of when daily survey responses were recorded
+    type: string

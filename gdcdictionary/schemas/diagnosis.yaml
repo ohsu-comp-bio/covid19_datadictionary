@@ -581,7 +581,7 @@ properties:
     enum:
       - "Personal"
       - "Sent_from_study"
-      - "None"
+      - "No_thermometer"
 
   nauseavomit_yn:
     description: >
