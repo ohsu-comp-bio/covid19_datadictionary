@@ -841,3 +841,16 @@ properties:
   survey_date:
     description: date time stamp of when daily survey responses were recorded
     type: string
+
+  thermometer:
+    description: >
+      What using to report temperature. Daily survey QID11
+    enum:
+      - "Personal"
+      - "Sent_from_study"
+      - "No_thermometer"
+
+  reported_temp:
+    description: >
+      reported temperature. daily survey QID7_TEXT
+    type: string

@@ -575,14 +575,6 @@ properties:
       - "No"
       - "Unknown"
 
-  thermometer:
-    description: >
-      What using to report temperature. Daily survey QID11
-    enum:
-      - "Personal"
-      - "Sent_from_study"
-      - "No_thermometer"
-
   nauseavomit_yn:
     description: >
       During this illness, did the patient experience any of the following symptoms?
