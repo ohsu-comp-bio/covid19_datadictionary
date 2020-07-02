@@ -352,3 +352,105 @@ properties:
 
   subjects:
     $ref: "_definitions.yaml#/to_one"
+    
+  survey_date:
+    description: >
+      date time stamp of when daily survey responses were recorded
+    type: string
+    
+  worried_lose_job_next_3mo:
+    description: How worried are you that you will lose your job in the next three months? cost of covid survey QID8 
+    type: string
+    enum:
+      - 'Not_worried'
+      - "Slightly_worried"
+      - "Somewhat_worried"
+      - "Very_worried"
+      - "Unsure"
+
+  occupation:
+    description: Please indicate if you are or were previously employed in any of the following occupations in the past 30 days (select all that apply) cost of covid QID10 
+    type: string
+
+  occupation_other:
+    description: Please list another occupation you are or were employed in that was not on the previous question’s list. (150 characters) cost of covid QID11_TEXT 
+    type: string 
+
+  employment_past_mo:
+    description: Were you employed at any point in the past month? cost of covid QID2 
+    type: string
+    enum: 
+      - "Yes"
+      - "No"
+      
+  option_to_work_home:
+    description: During the last 30 days, was the option to work from home available to you? cost of covid survey QID3 
+    type: string 
+    enum:
+      - "None_of_the_time"
+      - "Some_of_the_time"
+      - "Most_of_the_time"
+      - "All_the_time"
+      - "Do_not_know"
+
+  work_outside_home:
+    description: Did you continue to go to work outside of your home during the last 30 days? cost oc covid survey QID4 
+    type: string 
+    enum:
+      - "None_of_the_time"
+      - "Some_of_the_time"
+      - "Most_of_the_time"
+      - "All_the_time"
+      - "Do_not_know"
+    
+  employer_provide_exposure_protection:
+    description: How often did you feel like your employer provided proper protection to avoid exposure to coronavirus? cost of covid survey QID7
+    type: string
+    enum:
+      - "None_of_the_time"
+      - "Some_of_the_time"
+      - "Most_of_the_time"
+      - "All_the_time"
+  
+  impacts:
+    description: What impact has coronavirus had on your employment in the past 30 days? Select all that apply.
+    type: string
+    enum:
+      - "Lost_my_job"
+      - "Temporarily_furloughed"
+      - "Employer_reduced_my_hours"
+      - "Employer_reduced_my_salary/compensation"
+      - "Mandatory_use_of_sick_or_vacation_time"
+      - "No_impact_on_employment"
+      - "Other"
+      
+  other_impacts:
+    description: What other impact has the coronavirus had on your employment that was not included in the previous question? (300 characters). cost of covid survey QID6_TEXT
+    type: string
+
+  worry_financial_loss:
+    description: During the last 30 days, how often have you worried about personal financial loss (e.g., lost wages, job loss, investment/retirement loss, travel-related cancellations)? cost of covid survey QID12 
+    type: string 
+    enum:
+      - "None_of_the_time"
+      - "Some_of_the_time"
+      - "Most_of_the_time"
+      - "All_the_time"
+
+  worry_rent_or_mortgage:
+    description: During the last 30 days, how often have you worried about making your rent or mortgage payment? cost of covid survey QID13 
+    type: string 
+    enum:
+      - "None_of_the_time"
+      - "Some_of_the_time"
+      - "Most_of_the_time"
+      - "All_the_time"
+    
+  worry_provide_family:
+    description: During the last 30 days, how much have you worried about providing for your family? cost of covid survey QID14 
+    type: string 
+    enum:
+      - "None_of_the_time"
+      - "Some_of_the_time"
+      - "Most_of_the_time"
+      - "All_the_time"
