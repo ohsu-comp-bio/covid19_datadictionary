@@ -232,7 +232,7 @@ properties:
   current_status:
     description: >
       What is the current status of this person?
-    enum:  
+    enum:
       - PUI testing pendingMDR non XDR
       - PUI tested negative
       - Presumptive case (positive local test), confirmatory testing pending
