@@ -1,0 +1,110 @@
+$schema:
+
+id: "observation"
+title: Observation
+type: object
+namespace: http://gdc.nci.nih.gov
+category: clinical
+program: '*'
+project: '*'
+description: >
+  Data for the characterization of the patient by means of segmenting their self reported observations (e.g. symptoms, etc)
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+links:
+  - name: cases
+    backref: observations
+    label: describes
+    target_type: case
+    multiplicity: many_to_one
+    required: true
+
+required:
+  - submitter_id
+  - type
+  - observation_type
+  - days_from_start
+  - subjects
+
+uniqueKeys:
+  - [id]
+  - [project_id, submitter_id]
+
+properties:
+  type:
+    type: string
+
+  id:
+    $ref: "_definitions.yaml#/UUID"
+    systemAlias: node_id
+
+  state:
+    $ref: "_definitions.yaml#/state"
+
+  submitter_id:
+    type:
+      - string
+
+  subjects:
+    $ref: "_definitions.yaml#/to_one"
+    
+  observation_type:
+    description: >
+      Observations are polymorphic, this type identifies specific observation (e.g. sneezing, temperature)
+    type: string
+
+  observation_key:
+    description: >
+      There can be multiple instances of an observation_type, this key identifies instance.
+    type: string
+
+  days_from_start:
+    description: >
+      Days since the start of the study
+    term:
+      $ref: "_terms.yaml#/days_from_start"
+    type:
+      - number
+      - "null"
+    maximum: 720
+    minimum: 0
+
+  unit_of_measure:
+    description: >
+      Specifies measurement units (e.g. celsius)
+    type:
+      - string
+      - "null"
+
+  measurement:
+    description: >
+      Numeric measurement (e.g. 99.6 would be for reported temperature)
+    type:
+      - number
+      - "null"
+
+  description:
+    description: >
+      Reported text observation (e.g. very_mild, severe)
+    type:
+      - string
+      - "null"
+
+
+  cases:
+    $ref: "_definitions.yaml#/to_one"
+  project_id:
+    $ref: "_definitions.yaml#/project_id"
+  created_datetime:
+    $ref: "_definitions.yaml#/datetime"
+  updated_datetime:
+    $ref: "_definitions.yaml#/datetime"
