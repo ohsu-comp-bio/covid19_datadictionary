@@ -24,7 +24,7 @@ links:
   - name: subjects
     backref: observations
     label: describes
-    target_type: case
+    target_type: subjects
     multiplicity: many_to_one
     required: true
 
