@@ -1,4 +1,4 @@
-$schema:
+$schema: "http://json-schema.org/draft-04/schema#"
 
 id: "observation"
 title: Observation
@@ -21,7 +21,7 @@ systemProperties:
   - updated_datetime
 
 links:
-  - name: cases
+  - name: subjects
     backref: observations
     label: describes
     target_type: case
@@ -53,9 +53,6 @@ properties:
   submitter_id:
     type:
       - string
-
-  subjects:
-    $ref: "_definitions.yaml#/to_one"
     
   observation_type:
     description: >
@@ -100,7 +97,7 @@ properties:
       - "null"
 
 
-  cases:
+  subects:
     $ref: "_definitions.yaml#/to_one"
   project_id:
     $ref: "_definitions.yaml#/project_id"
