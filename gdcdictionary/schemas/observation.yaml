@@ -97,7 +97,7 @@ properties:
       - "null"
 
 
-  subects:
+  subjects:
     $ref: "_definitions.yaml#/to_one"
   project_id:
     $ref: "_definitions.yaml#/project_id"
