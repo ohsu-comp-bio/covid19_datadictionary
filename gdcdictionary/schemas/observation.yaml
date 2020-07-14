@@ -32,7 +32,7 @@ required:
   - submitter_id
   - type
   - observation_type
-  - survey_date
+  - days_from_start
   - subjects
 
 uniqueKeys:
@@ -64,7 +64,7 @@ properties:
       There can be multiple instances of an observation_type, this key identifies instance.
     type: string
 
-  survey_date:
+  days_from_start:
     description: >
       Date of response
     term:
@@ -72,7 +72,6 @@ properties:
     type:
       - number
       - "null"
-    maximum: 720
     minimum: 0
 
   unit_of_measure:
@@ -97,7 +96,7 @@ properties:
       - "null"
 
 
-  subects:
+  subjects:
     $ref: "_definitions.yaml#/to_one"
   project_id:
     $ref: "_definitions.yaml#/project_id"
