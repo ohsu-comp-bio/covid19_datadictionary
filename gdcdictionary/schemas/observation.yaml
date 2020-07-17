@@ -72,7 +72,6 @@ properties:
     type:
       - number
       - "null"
-    maximum: 720
     minimum: 0
 
   unit_of_measure:
