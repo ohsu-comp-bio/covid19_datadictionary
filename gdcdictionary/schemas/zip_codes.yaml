@@ -1,0 +1,75 @@
+$schema: "http://json-schema.org/draft-04/schema#"
+
+id: "zip_code"
+title: Zip Code
+type: object
+namespace: https://chicagoland.pandemicresponsecommons.org
+category: administrative
+program: '*'
+project: '*'
+description: "Mailing Zip Code."
+additionalProperties: false
+submittable: true
+validators: null
+
+systemProperties:
+  - id
+  - project_id
+  - state
+  - created_datetime
+  - updated_datetime
+
+required:
+  - submitter_id
+  - type
+  - projects
+
+uniqueKeys:
+  - [ id ]
+  - [ project_id, submitter_id ]
+
+properties:
+  $ref: "_definitions.yaml#/ubiquitous_properties"
+
+  province_state:
+    description: >
+      Province or state
+    type: string
+
+  country_region:
+    description: >
+      Country or region
+    type: string
+
+  county:
+    description: >
+      County
+    type: string
+    termDef:
+      - term: county
+        source: NCI Thesaurus
+        term_id: C49292
+        term_version: 20.03e (Release date:2020-03-31)
+
+  latitude:
+    description: >
+      Latitude
+    type: string
+    termDef:
+      - term: latitude
+        source: NCI Thesaurus
+        term_id: C68642
+        term_version: 20.03e (Release date:2020-03-31)
+
+  longitude:
+    description: >
+      Longitude
+    type: string
+    termDef:
+      - term: longitude
+        source: NCI Thesaurus
+        term_id: C68643
+        term_version: 20.03e (Release date:2020-03-31)
+
+  projects:
+    $ref: "_definitions.yaml#/to_one_project"
