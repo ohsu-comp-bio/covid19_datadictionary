@@ -197,7 +197,7 @@ properties:
       Other specified race
     type: string
 
-  tribe_member:
+  tribe_membership:
     description: >
       Tribe that subject is a member of
     type: string
