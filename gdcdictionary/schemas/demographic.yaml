@@ -197,6 +197,11 @@ properties:
       Other specified race
     type: string
 
+  tribe_member:
+    description: >
+      Tribe that subject is a member of
+    type: string
+        
   ethnicity:
     term:
       $ref: "_terms.yaml#/ethnicity"
