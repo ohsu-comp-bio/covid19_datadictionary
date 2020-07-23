@@ -71,5 +71,10 @@ properties:
         term_id: C68643
         term_version: 20.03e (Release date:2020-03-31)
 
+  atab:
+    description: >
+      Area Trauma Advisory Board (ATAB)
+    type: integer
+
   projects:
     $ref: "_definitions.yaml#/to_one_project"
