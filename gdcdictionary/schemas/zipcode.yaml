@@ -1,6 +1,6 @@
 $schema: "http://json-schema.org/draft-04/schema#"
 
-id: "zip_code"
+id: "zipcode"
 title: Zip Code
 type: object
 namespace: https://chicagoland.pandemicresponsecommons.org
@@ -75,6 +75,11 @@ properties:
     description: >
       Area Trauma Advisory Board (ATAB)
     type: integer
+
+  annotation:
+    description: >
+      Descriptive Annotation of zipcode
+    type: string
 
   projects:
     $ref: "_definitions.yaml#/to_one_project"
