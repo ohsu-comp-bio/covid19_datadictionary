@@ -37,6 +37,11 @@ links:
       target_type: project
       multiplicity: many_to_one
       required: false
+  - name: zipcode
+    label: zipcode
+    multiplicity: many_to_one
+    target_type: zipcode
+    required: true
 
 required:
   - submitter_id
