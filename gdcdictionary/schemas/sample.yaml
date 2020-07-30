@@ -491,11 +491,13 @@ properties:
       - Local Resection (Exoresection; wall resection)
       - Lumpectomy
       - Modified Radical Mastectomy
+      - Nasal Swab
       - Needle Biopsy
       - Open Craniotomy
       - Open Partial Nephrectomy
       - Open Radical Nephrectomy
       - Open Radical Prostatectomy
+      - Oral Swab
       - Orchiectomy
       - Other
       - Other Surgical Resection
@@ -690,7 +692,16 @@ properties:
       The scientific taxonomy of the organism.
     type: string 
     
- 
+   date_participant_orderkit:
+    description: >
+      Date participant ordered covid test kit. Labcorp status 'DownloadDate'
+    type: string
+    
+  date_test_to_participant:
+    description: >
+      Date testing facility sent covid test kit to participant house. Labcorp status "PixelShipDate"
+    type: string     
+    
 
   subjects:
     $ref: "_definitions.yaml#/to_one"
