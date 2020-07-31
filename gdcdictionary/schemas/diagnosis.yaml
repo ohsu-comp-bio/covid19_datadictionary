@@ -879,6 +879,11 @@ properties:
       NP Swab: Collection date - 1
     type: string
 
+  spec_npswab1studyresult:
+    description: >
+      Test result. Labcorp screening "COVID19 PCR" ex. not detected, detected
+    type: string 
+      
   spec_npswab1state:
     description: >
       NP Swab: State Lab Tested - 1
@@ -1369,6 +1374,21 @@ properties:
       Additional State/local Specimen IDs:
     type: string
 
+  company:
+    description: >
+      Company that processed and produced test result. Labcorp screening "Partner"
+    type: string 
+
+  company_service_type:
+    description: >
+      Company service. Labcorp status "ServiceType" ex. Pixel
+    type: string 
+
+  screen_type:
+    description: >
+      Type of screening test. Labcorp screening "ScreeningType" ex. Home Test Kit
+    type: string 
+    
   final_notes:
     description: >
       Any additional comments/notes?
