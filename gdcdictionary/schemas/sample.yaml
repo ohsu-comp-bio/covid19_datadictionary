@@ -692,7 +692,7 @@ properties:
       The scientific taxonomy of the organism.
     type: string 
     
-   date_participant_orderkit:
+  date_participant_orderkit:
     description: >
       Date participant ordered covid test kit. Labcorp status 'DownloadDate'
     type: string
