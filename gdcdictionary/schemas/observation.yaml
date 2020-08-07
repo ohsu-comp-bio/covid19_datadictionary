@@ -87,6 +87,11 @@ properties:
     type:
       - number
       - "null"
+      
+  notes:
+    description: >
+      Additional information
+    type: string
 
 
   description:
